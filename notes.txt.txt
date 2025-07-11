@@ -1,0 +1,75 @@
+ Step 1: Setup Your Development Environment
+
+
+  If you haven't already, you need to set up the project on your machine. This is a one-time setup.
+
+
+   1. Install Node.js: If you don't have it, download and install it from the official Node.js website (https://nodejs.org/).
+   2. Install Dependencies: Open your command line/terminal in the project folder (C:\Users\harsh\project\nexgenvendors\nexgenvendors-main) and
+      run this command. It will download all the development tools listed in package.json (like Tailwind CSS itself).
+
+
+ ╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ ✔  Shell npm install (Installs the necessary Node.js packages and dependencies for the project.)                                   │
+ │                                                                                                                                    │
+ │                                                                                                                                    │
+ │    added 124 packages, and audited 125 packages in 7s                                                                              │
+ │                                                                                                                                    │
+ │    32 packages are looking for funding                                                                                             │
+ │      run `npm fund` for details                                                                                                    │
+ │                                                                                                                                    │
+ │    3 vulnerabilities (1 low, 1 moderate, 1 high)                                                                                   │
+ │                                                                                                                                    │
+ │    To address all issues, run:                                                                                                     │
+ │      npm audit fix                                                                                                                 │
+ │                                                                                                                                    │
+ │    Run `npm audit` for details.                                                                                                    │
+ │                                                                                                                                    │
+ ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+✦ Great, the development dependencies are installed.
+
+  Step 2: Make Your Changes
+
+
+  Now you can modify the site's design.
+
+
+   * To change the theme (colors, fonts, etc.): Open and edit the tailwind.config.js file. For example, you could add a new color to the
+     colors object.
+   * To change the layout or add new components: Open and edit your index.html file. You will add or change the Tailwind utility classes on
+     your HTML elements.
+
+  Step 3: Rebuild the CSS
+
+
+  This is the most important step. After you've saved your changes, you need to run the Tailwind build command. Looking at your
+  package.json, the correct command is tw-build.
+
+
+  This command will watch for any changes you make and automatically rebuild the CSS. To start this process, run the following in your
+  terminal:
+ ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+ │ ✔  Shell npm run tw-build (This command will start the Tailwind CSS build process in watch mode. It will automatically regenerate the `asse… │
+ │                                                                                                                                              │
+ │                                                                                                                                              │
+ │    > inazuma-tailwind@1.0.0 tw-build                                                                                                         │
+ │    > npx tailwindcss -i ./src/css/tailwind.css -o ./assets/css/main.css --watch                                                              │
+ │                                                                                                                                              │
+ │                                                                                                                                              │
+ ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+✦ Now, the build process is watching for changes.
+
+
+  Leave that terminal window open. Every time you save a change in index.html or tailwind.config.js, it will automatically regenerate the
+  assets/css/main.css file with your updates.
+
+  Step 4: View Your Changes
+
+
+  Just open the index.html file in your web browser to see the results.
+
+  Step 5: Deploy
+
+
+  When you are finished making all your changes and are ready to give the files to your client, you will provide them with the updated
+  index.html and the assets folder, which now contains the new main.css file.
