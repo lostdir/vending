@@ -4,12 +4,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'site.webmanifest.json') {
-            return 'site.webmanifest.json';
-          }
-          return 'assets/[name]-[hash][extname]';
-        },
+        // Removed custom assetFileNames logic as manifest is now in public dir
       },
     },
   },
